@@ -6,6 +6,7 @@
 /.idea
 /.vagrant
 /.phpintel
+/wordpress/wp-config.php
 .phpintel
 Homestead.json
 Homestead.yaml

@@ -1,14 +1,14 @@
 {
-    "name": "johnpbloch/wordpress-core",
+    "name": "cube_summation",
     "description": "WordPress is web software you can use to create a beautiful website or blog.",
     "keywords": ["wordpress", "blog", "cms"],
     "type": "wordpress-core",
-    "homepage": "http://wordpress.org/",
+    "homepage": "http://localhost/cube_summation/public",
     "license": "GPL-2.0+",
     "authors": [
         {
-            "name": "WordPress Community",
-            "homepage": "http://wordpress.org/about/"
+            "name": "Cube Summation",
+            "homepage": "http://localhost/cube_summation/public"
         }
     ],
     "support": {

@@ -11,8 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Route::post('/cube', 'CubeController@index');
+
+Route::get('/', [
+    'as'    => 'home',
+    'uses'  => 'HomeController@index'
+]);

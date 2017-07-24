@@ -1,4 +1,9 @@
 <?php
+/** Set up dotenv **/
+/*require dirname(__DIR__).'/vendor/autoload.php';
+$dotenv = new Dotenv\Dotenv(dirname(__DIR__));
+$dotenv->load();*/
+
 /**
  * Bootstrap file for setting the ABSPATH constant
  * and loading the wp-config.php file. The wp-config.php

@@ -16,6 +16,8 @@ class CubeController extends Controller
     	//If there is nothing in the input, it will return the home(welcome view)
 		if( empty($request->input) ){
 			return view('welcome',['noInput' => 'Nothing to submit.']);
+			/*$data =  \Corcel\Page::slug('sample-page')->first();
+    		return view('home')->with('data', $data);*/
 		}
 
 		$userInput = $this->inputToArray($request->input);
