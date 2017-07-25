@@ -1,8 +1,12 @@
 <h1> Cubbe Summation </h1>
 <span>Laravel - Wordpress</span>
 
+http://localhost/cube_summation/wordpress/
+
 laravel 5.4
+
 php 7.1
+
 mysql  15.1
 
 JS:
