@@ -15,7 +15,15 @@ class CubeController extends Controller
     {
     	//If there is nothing in the input, it will return the home(welcome view)
 		if( empty($request->input) ){
-			return view('welcome',['noInput' => 'Nothing to submit.']);
+
+			$response = ['noInput' => 'Nothing to submit.'];
+
+			if(!isset($request->wp)){
+				return view('welcome',$response);
+			}else{
+				return json_encode($response);
+			}
+			
 			/*$data =  \Corcel\Page::slug('sample-page')->first();
     		return view('home')->with('data', $data);*/
 		}
@@ -38,8 +46,14 @@ class CubeController extends Controller
 				$this->results[] = $result;
 			}
 		}
-		// return view and results
-		return view('welcome',['results' => $this->results]);
+		$returnResult = ['results' => $this->results];
+
+		if(!isset($request->wp)){
+			return view('welcome',$returnResult);
+		}else{
+			return json_encode($returnResult);
+		}
+		// return view and results		
     }
 
     private function inputToArray($input)

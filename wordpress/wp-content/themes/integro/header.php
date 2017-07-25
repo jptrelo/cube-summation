@@ -18,6 +18,25 @@
 	<!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
-<body>
+<body <?php body_class(); ?>>
 
-<div class="container-fluid">
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'integro' ); ?></a>
+
+	<header id="masthead" class="site-header" role="banner">
+
+		<?php if ( has_nav_menu( 'top' ) ) : ?>
+			<div class="navigation-top">
+				<div class="wrap">
+					<?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
+				</div><!-- .wrap -->
+			</div><!-- .navigation-top -->
+		<?php endif; ?>
+		<?php if ( is_front_page() ) : ?>
+				<<?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+			<?php endif; ?>
+				
+
+	</header><!-- #masthead -->
+
+	
+	<div id="content" class="site-content container-fluid">
